@@ -1,0 +1,67 @@
+﻿@model Final.Models.Appointment
+
+@{
+    ViewBag.Title = "Reschedule Appointment";
+}
+
+<!-- Bootstrap & Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-warning text-dark d-flex justify-content-between align-items-center">
+            <h4><i class="fa-solid fa-calendar-days me-2"></i> Reschedule Appointment</h4>
+            <a href="@Url.Action("Index")" class="btn btn-light btn-sm">
+                <i class="fa-solid fa-arrow-left"></i> Back to List
+            </a>
+        </div>
+
+        <div class="card-body">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+
+                <div class="mb-3">
+                    <label class="form-label" for="AppointmentDate">
+                        <i class="fa-solid fa-calendar-day me-1"></i> New Appointment Date
+                    </label>
+                    @Html.TextBoxFor(model => model.AppointmentDate, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                    @Html.ValidationMessageFor(model => model.AppointmentDate, "", new { @class = "text-danger" })
+                </div>
+
+                @*<div class="mb-3">
+                    <label class="form-label" for="Notes">
+                        <i class="fa-solid fa-note-sticky me-1"></i> Notes
+                    </label>
+                    @Html.TextAreaFor(model => model.Notes, new { @class = "form-control", rows = 4, maxlength = 250, placeholder = "Add any relevant notes..." })
+                    @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
+                </div>*@
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-warning">
+                        <i class="fa-solid fa-calendar-check me-1"></i> Confirm Reschedule
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        // Optional: Add character counter for notes
+        $('#Notes').on('input', function () {
+            const count = this.value.length;
+            if (!$('#noteCounter').length) {
+                $(this).after('<small id="noteCounter" class="text-muted d-block mt-1"></small>');
+            }
+            $('#noteCounter').text(`${count}/250 characters`);
+        });
+    </script>
+}

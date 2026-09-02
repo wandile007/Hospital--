@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+    ViewBag.Message = "We’re here to help you stay healthy and informed.";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+<style>
+    .card-icon {
+        font-size: 1.5rem;
+        margin-right: 8px;
+        transition: transform 0.3s ease;
+    }
+
+        .card-icon:hover {
+            transform: scale(1.2);
+        }
+
+    .card-body h5 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+    }
+
+    .map-placeholder {
+        background-color: #e9ecef;
+        border-radius: 8px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+        margin: 0 10px;
+        color: #007bff;
+        transition: color 0.3s ease;
+    }
+
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+</style>
+
+<main aria-labelledby="title" class="container py-5">
+    <!-- Header -->
+    <h2 id="title" class="text-center text-primary mb-4" title="Reach out to our team">
+        <i class="fas fa-phone-alt"></i> @ViewBag.Title
+    </h2>
+    <h4 class="text-center text-muted mb-5" title="Our support team is ready to assist">@ViewBag.Message</h4>
+
+    <!-- Contact Info -->
+    <div class="row">
+        <!-- Address & Phone -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-info" title="Our physical location">
+                        <i class="fas fa-map-marker-alt card-icon"></i> Address
+                    </h5>
+                    <p class="card-text">
+                        Petermaritzburg<br />
+                        Redmond, WA 98052-6399<br />
+                        <i class="fas fa-phone card-icon" title="Call us"></i> <strong>Phone:</strong> 068 139 5819<br />
+                        <i class="fas fa-clock card-icon" title="Office hours"></i> <strong>Hours:</strong> Mon–Fri, 8am–6pm
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email & Social -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-success" title="Email our departments">
+                        <i class="fas fa-envelope card-icon"></i> Email Contacts
+                    </h5>
+                    <p class="card-text">
+                        <strong><i class="fas fa-headset card-icon" title="Customer support"></i> Support:</strong>
+                        <a href="mailto:Support@example.com">healthcare@gmail.com</a><br />
+                        <strong><i class="fas fa-bullhorn card-icon" title="Marketing inquiries"></i> Email Us:</strong>
+                        <a href="mailto:dataninjaai2024@gmail.com">healthcare@gmail.com</a>
+                    </p>
+                    <div class="mt-3">
+                        <h6 class="text-muted">Follow us</h6>
+                        <div class="social-icons">
+                            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Placeholder -->
+    <div class="map-responsive mt-4" title="Map of UKZN Pietermaritzburg Campus">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.419167837151!2d30.39869707551878!3d-29.62414487506295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef705f6c0f7b2b3%3A0x7a3e8e1f4a4e4d6e!2sUniversity%20of%20KwaZulu-Natal%2C%20Pietermaritzburg%20Campus!5e0!3m2!1sen!2sza!4v1694012345678"
+                width="100%"
+                height="150%"
+                style="border:0; border-radius:20px;"
+                allowfullscreen="allowfullscreen"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+
+    <!-- Back Button -->
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-outline-primary fw-bold" title="Return to homepage">
+            <i class="fas fa-arrow-left me-2"></i> Back to Home
+        </a>
+    </div>
+</main>

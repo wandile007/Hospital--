@@ -1,0 +1,287 @@
+﻿@using Health__.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    main {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+        padding: 20px;
+    }
+
+    .svg-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .form-container {
+        position: relative;
+        z-index: 1;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 500px;
+        animation: fadeIn 1s ease-in-out;
+        transition: transform 0.3s ease;
+    }
+
+    .form-container:hover {
+        transform: scale(1.02);
+    }
+
+    keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2, h4 {
+        text-align: center;
+        color: #00695c;
+    }
+
+    .form-label i {
+        color: #00796b;
+        margin-right: 8px;
+    }
+
+    a {
+        color: #00796b;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #004d40;
+        text-decoration: underline;
+    }
+
+    .btn-health {
+        background-color: #00796b;
+        color: white;
+        border: none;
+        transition: transform 0.5s ease;
+    }
+
+    .btn-health:hover {
+        background-color: #004d40;
+        transform: scale(1.05);
+    }
+
+    .dark-mode {
+        background-color: #121212;
+        color: #e0f7fa;
+    }
+
+    .dark-mode .form-container {
+        background-color: #1e1e1e;
+        color: #e0f7fa;
+        box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+    }
+
+    .dark-mode input,
+    .dark-mode select,
+    .dark-mode textarea {
+        background-color: #2c2c2c;
+        color: #e0f7fa;
+        border-color: #555;
+    }
+
+    .dark-mode .btn-health {
+        background-color: #004d40;
+    }
+
+    .input-group-text {
+        cursor: pointer;
+    }
+
+    .is-valid {
+        border-color: #198754;
+    }
+
+    .is-invalid {
+        border-color: #dc3545;
+    }
+</style>
+
+<main aria-labelledby="title">
+    <div class="svg-bg">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width:100%; height:100%;">
+            <circle cx="20" cy="20" r="10" fill="#b2dfdb">
+                <animate attributeName="cx" values="20;80;20" dur="15s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="80" cy="80" r="10" fill="#80cbc4">
+                <animate attributeName="cy" values="80;20;80" dur="15s" repeatCount="indefinite" />
+            </circle>
+        </svg>
+    </div>
+
+    <div class="form-container">
+        <h2 id="title"><i class="fa-solid fa-right-to-bracket text-success"></i> @ViewBag.Title</h2>
+        <hr />
+        <div class="alert alert-info text-center" role="alert">
+            <i class="fa-solid fa-lightbulb"></i> Tip: Use a strong password with letters, numbers, and symbols.
+        </div>
+        <p class="text-muted text-center small">Tip: Press <kbd>Tab</kbd> to move between fields</p>
+
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form", id = "loginForm" }))
+        {
+            @Html.AntiForgeryToken()
+            <h4><i class="fa-solid fa-user-shield text-info"></i> Secure Login</h4>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+            <div class="mb-3">
+                <label class="form-label" title="Enter your registered email address">
+                    <i class="fa-solid fa-envelope"></i> @Html.DisplayNameFor(m => m.Email)
+                </label>
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter your email", id = "emailInput" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" title="Enter your account password">
+                    <i class="fa-solid fa-lock"></i> @Html.DisplayNameFor(m => m.Password)
+                </label>
+                <div class="input-group">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter your password", id = "passwordInput" })
+                    <span class="input-group-text" id="togglePassword" title="Show/Hide Password">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </span>
+                </div>
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-check mb-3">
+                @Html.CheckBoxFor(m => m.RememberMe, new { @class = "form-check-input", title = "Stay logged in on this device" })
+                <label class="form-check-label" title="Keep me logged in">
+                    <i class="fa-solid fa-clock-rotate-left"></i> Remember Me
+                </label>
+            </div>
+
+            <div class="text-center mb-3">
+                <button type="button" class="btn btn-outline-danger me-2" title="Login with Google">
+                    <i class="fa-brands fa-google"></i> Google
+                </button>
+                <button type="button" class="btn btn-outline-primary" title="Login with Microsoft">
+                    <i class="fa-brands fa-microsoft"></i> Microsoft
+                </button>
+            </div>
+
+            <div class="text-center mb-3">
+                <button type="button" class="btn btn-outline-secondary me-2" id="faceLogin" title="Use Face ID">
+                    <i class="fa-solid fa-face-smile-beam"></i> Face ID
+                </button>
+                <button type="button" class="btn btn-outline-secondary" id="fingerLogin" title="Use Fingerprint">
+                    <i class="fa-solid fa-fingerprint"></i> Fingerprint
+                </button>
+            </div>
+
+            <div class="text-center mb-3">
+                <button type="button" class="btn btn-outline-info" id="voiceLogin" title="Use voice login">
+                    <i class="fa-solid fa-microphone"></i> Voice Login
+                </button>
+            </div>
+
+            <div class="form-check form-switch text-end mb-3">
+                <input class="form-check-input" type="checkbox" id="darkModeToggle" title="Toggle dark mode">
+                <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+            </div>
+
+            <div id="spinner" class="text-center mb-3" style="display:none;">
+                <i class="fa-solid fa-circle-notch fa-spin fa-2x text-success"></i>
+                <p>Logging in...</p>
+            </div>
+
+            <div class="d-grid mb-3">
+                <input type="submit" value="Log in" class="btn btn-health" title="Click to log in" />
+            </div>
+        }
+
+            <p class="text-center">
+                @Html.ActionLink("Register as a new user", "Register", null, new { @title = "Create a new account", @class = "fw-bold" })
+            </p>
+            <p class="text-center">
+                @Html.ActionLink("Forgot your password?", "ForgotPassword", null, new { @title = "Reset your password" })
+            </p>
+
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+                <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+                <script>
+        // Bootstrap tooltips
+        document.addEventListener('DOMContentLoaded', function () {
+            const tooltipTriggerList = Array.from(document.querySelectorAll('[title]'));
+            tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+
+            // Auto-focus email field
+            document.getElementById('emailInput').focus();
+        });
+
+        // Dark mode toggle
+        document.getElementById('darkModeToggle').addEventListener('change', function () {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Password visibility toggle
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            const pwd = document.getElementById('passwordInput');
+            const icon = this.querySelector('i');
+            pwd.type = pwd.type === 'password' ? 'text' : 'password';
+            icon.classList.toggle('fa-eye');
+            icon.classList.toggle('fa-eye-slash');
+        });
+
+        // Simulated biometric login
+        document.getElementById('faceLogin').addEventListener('click', function () {
+            alert("🔐 Face ID authentication coming soon!");
+        });
+
+        document.getElementById('fingerLogin').addEventListener('click', function () {
+            alert("🔐 Fingerprint authentication coming soon!");
+        });
+
+        // Simulated voice login
+        document.getElementById('voiceLogin').addEventListener('click', function () {
+            alert("🎙️ Voice login feature coming soon!");
+        });
+
+       
+
+        // Login attempt counter + confetti
+        let attempts = 0;
+        document.getElementById('loginForm').addEventListener('submit', function () {
+            attempts++;
+            console.log(`Login attempt #${attempts}`);
+            document.getElementById('spinner').style.display = 'block';
+
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        });
+                </script>
+            }
+
+

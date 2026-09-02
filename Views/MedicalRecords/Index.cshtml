@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Final.Models.MedicalRecord>
+
+@{
+    ViewBag.Title = "Medical Records";
+}
+
+<h2 style="color: #2c3e50; font-weight: bold; margin-bottom: 20px;">Medical Records</h2>
+
+<!-- Filter Bar (Placeholder for future logic) -->
+<div style="margin-bottom: 20px; display: flex; gap: 15px;">
+    <input type="text" placeholder="Search by Doctor" style="padding: 8px; width: 200px;" />
+    <input type="text" placeholder="Search by Patient" style="padding: 8px; width: 200px;" />
+    <input type="date" style="padding: 8px;" />
+    <input type="date" style="padding: 8px;" />
+    <button class="btn btn-primary" style="padding: 8px 16px;">🔍 Filter</button>
+</div>
+
+<p>
+    @Html.ActionLink("➕ Create New Record", "Create", null, new
+    {
+        @class = "btn btn-success",
+        @style = "margin-bottom: 15px;"
+    })
+</p>
+
+<table style="width: 100%; border-collapse: collapse; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;">
+    <thead style="background-color: #3498db; color: white;">
+        <tr>
+            <th style="padding: 10px;">@Html.DisplayNameFor(model => model.First().Doctor.Name)</th>
+            <th style="padding: 10px;">@Html.DisplayNameFor(model => model.First().Patient.FullName)</th>
+            <th style="padding: 10px;">@Html.DisplayNameFor(model => model.First().Diagnosis)</th>
+            <th style="padding: 10px;">@Html.DisplayNameFor(model => model.First().TreatmentPlan)</th>
+            <th style="padding: 10px;">@Html.DisplayNameFor(model => model.First().PrescribedMedications)</th>
+            <th style="padding: 10px;">@Html.DisplayNameFor(model => model.First().LabTestsOrdered)</th>
+            <th style="padding: 10px;">@Html.DisplayNameFor(model => model.First().VisitDate)</th>
+            <th style="padding: 10px;">@Html.DisplayNameFor(model => model.First().CreatedDate)</th>
+            <th style="padding: 10px;">@Html.DisplayNameFor(model => model.First().Notes)</th>
+            <th style="padding: 10px;">@Html.DisplayNameFor(model => model.First().IsFollowUpRequired)</th>
+            <th style="padding: 10px;">@Html.DisplayNameFor(model => model.First().FollowUpDate)</th>
+            <th style="padding: 10px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="border-bottom: 1px solid #ecf0f1;">
+                <td style="padding: 8px;">@item.Doctor.Name</td>
+                <td style="padding: 8px;">@item.Patient.FullName</td>
+                <td style="padding: 8px;">@item.Diagnosis</td>
+                <td style="padding: 8px;">@item.TreatmentPlan</td>
+                <td style="padding: 8px;">@item.PrescribedMedications</td>
+                <td style="padding: 8px;">@item.LabTestsOrdered</td>
+                <td style="padding: 8px;">@item.VisitDate.ToString("dd MMM yyyy")</td>
+                <td style="padding: 8px;">@item.CreatedDate.ToString("dd MMM yyyy")</td>
+                <td style="padding: 8px;">@item.Notes</td>
+                <td style="padding: 8px;">
+                    <span style="color: @(item.IsFollowUpRequired ? "#e67e22" : "#2ecc71"); font-weight: bold;">
+                        @(item.IsFollowUpRequired ? "Yes" : "No")
+                    </span>
+                </td>
+                <td style="padding: 8px;">@(item.FollowUpDate?.ToString("dd MMM yyyy") ?? "-")</td>
+                <td style="padding: 8px;">
+                    @Html.ActionLink("✏️ Edit", "Edit", new { id = item.RecordId }, new
+                    {
+                        @class = "btn btn-warning btn-sm",
+                        @style = "margin-right: 5px;"
+                    })
+                    @Html.ActionLink("🔍 Details", "Details", new { id = item.RecordId }, new
+                    {
+                        @class = "btn btn-info btn-sm",
+                        @style = "margin-right: 5px;"
+                    })
+                    @Html.ActionLink("🗑️ Delete", "Delete", new { id = item.RecordId }, new
+                    {
+                        @class = "btn btn-danger btn-sm"
+                    })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

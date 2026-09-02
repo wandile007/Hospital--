@@ -1,0 +1,115 @@
+﻿@*@model IEnumerable<Final.Models.Patient>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicalAidProvider)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicalAidNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Allergies)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicConditions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmergencyContactName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmergencyContactPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdentityUserId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicalAidProvider)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicalAidNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Allergies)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChronicConditions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmergencyContactName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmergencyContactPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdentityUserId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.PatientId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.PatientId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.PatientId })
+            </td>
+        </tr>
+    }
+
+</table>*@

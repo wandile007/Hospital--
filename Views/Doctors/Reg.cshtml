@@ -1,0 +1,192 @@
+﻿@model Final.Models.Doctor
+@{
+    ViewBag.Title = "Doctor Registration";
+}
+
+<!-- External Libraries -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-primary-emphasis">
+        <i class="fa-solid fa-user-doctor me-2"></i> Register New Doctor
+    </h2>
+
+    @using (Html.BeginForm("Create", "Doctor", FormMethod.Post, new { enctype = "multipart/form-data", @id = "doctorForm", @class = "needs-validation", novalidate = "novalidate" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="card shadow-sm p-4 mb-5 bg-white rounded-4 border-0">
+            <h4 class="mb-3 text-secondary">
+                <i class="fa-solid fa-id-badge me-2"></i> Doctor Details
+            </h4>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger mb-3" })
+
+            <!-- Name -->
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-light"><i class="fa fa-user"></i></span>
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", placeholder = "Full Name", required = "required", autofocus = "autofocus" })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Surname -->
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-light"><i class="fa fa-user-tag"></i></span>
+                @Html.TextBoxFor(model => model.Surname, new { @class = "form-control", placeholder = "Surname", required = "required" })
+                @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Specialty -->
+            <div class="mb-3">
+                @Html.LabelFor(model => model.Specialty, new { @class = "form-label", @data_bs_toggle = "tooltip", title = "Select the doctor's medical specialty" })
+                @Html.EnumDropDownListFor(model => model.Specialty, new { @class = "form-select", required = "required" })
+                @Html.ValidationMessageFor(model => model.Specialty, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Office Location -->
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-light"><i class="fa fa-location-dot"></i></span>
+                @Html.TextBoxFor(model => model.OfficeLocation, new { @class = "form-control", placeholder = "Office Location", required = "required" })
+                @Html.ValidationMessageFor(model => model.OfficeLocation, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Phone Number -->
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-light"><i class="fa fa-phone"></i></span>
+                @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", type = "tel", placeholder = "Phone Number", required = "required" })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Email -->
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-light"><i class="fa fa-envelope"></i></span>
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", type = "email", placeholder = "Email", required = "required" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Date Joined -->
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-light"><i class="fa fa-calendar-day"></i></span>
+                @Html.TextBoxFor(model => model.DateJoined, new { @class = "form-control", type = "date", required = "required" })
+                @Html.ValidationMessageFor(model => model.DateJoined, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Availability -->
+            <div class="form-check form-switch mb-3">
+                @Html.CheckBoxFor(model => model.IsAvailable, new { @class = "form-check-input", role = "switch" })
+                @Html.LabelFor(model => model.IsAvailable, new { @class = "form-check-label" })
+                @Html.ValidationMessageFor(model => model.IsAvailable, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+                @Html.LabelFor(model => model.Password)
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control", id = "passwordInput", placeholder = "Password", autocomplete = "new-password", required = "required", aria_describedby = "passwordStrength" })
+                <small id="passwordStrength" class="form-text text-muted"></small>
+                <div class="progress mt-2" style="height: 8px;">
+                    <div id="passwordProgress" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                </div>
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="mb-3">
+                @Html.LabelFor(model => model.ConfirmPassword)
+                @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control", id = "confirmPasswordInput", placeholder = "Confirm Password", autocomplete = "new-password", required = "required", aria_describedby = "passwordMatch" })
+                <small id="passwordMatch" class="form-text text-muted"></small>
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal">
+                    <i class="fa fa-user-plus me-1"></i> Add Doctor
+                </button>
+                @Html.ActionLink("← Back to List", "Index", null, new { @class = "btn btn-outline-secondary rounded-pill px-4" })
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Modal Confirmation -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content border-0 rounded-4 shadow">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                    <i class="fa fa-check-circle me-2"></i> Confirm Submission
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <i class="fa fa-question-circle text-primary fs-3 mb-3"></i>
+                <p>Are you sure you want to submit this doctor's registration?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-success" form="doctorForm">
+                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true" id="submitSpinner"></span>
+                    Confirm & Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        // Bootstrap 5 tooltip activation
+        $(function () {
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        });
+
+        // Password strength meter
+        const passwordInput = document.getElementById("passwordInput");
+        const confirmInput = document.getElementById("confirmPasswordInput");
+        const strengthText = document.getElementById("passwordStrength");
+        const matchText = document.getElementById("passwordMatch");
+
+        passwordInput.addEventListener("input", updateStrength);
+        confirmInput.addEventListener("input", checkMatch);
+
+        function updateStrength() {
+            const password = passwordInput.value;
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            const levels = ["Very Weak 🔴", "Weak 🟠", "Moderate 🟡", "Strong 🟢", "Very Strong ✅"];
+            strengthText.textContent = levels[strength - 1] || "";
+            strengthText.className = "form-text text-" + (strength < 3 ? "danger" : strength < 5 ? "warning" : "success");
+
+            checkMatch();
+        }
+
+        function checkMatch() {
+            if (confirmInput.value === "") {
+                matchText.textContent = "";
+                return;
+            }
+
+            if (confirmInput.value === passwordInput.value) {
+                matchText.textContent = "Passwords match ✅";
+                matchText.className = "form-text text-success";
+            } else {
+                matchText.textContent = "Passwords do not match ❌";
+                matchText.className = "form-text text-danger";
+            }
+        }
+
+        // Spinner on submit
+        document.querySelector('#confirmModal .btn-success').addEventListener('click', function () {
+            document.getElementById('submitSpinner').classList.remove('d-none');
+        });
+    </script>
+}

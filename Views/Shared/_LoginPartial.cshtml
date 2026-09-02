@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNet.Identity
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "d-flex align-items-center ms-auto" }))
+    {
+        @Html.AntiForgeryToken()
+
+<ul class="navbar-nav ms-auto">
+    <li class="nav-item d-flex align-items-center">
+        <span class="nav-link text-white fw-semibold">
+            <i class="fa-solid fa-user-circle me-2"></i>
+            Welcome, @(User.IsInRole("Admin") ? "Admin" : User.Identity.Name)!
+        </span>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-info" href="javascript:document.getElementById('logoutForm').submit()" title="Log out" data-bs-toggle="tooltip">
+            <i class="fa-solid fa-right-from-bracket"></i> Log Out
+        </a>
+    </li>
+
+</ul>
+    }
+}
+else
+{
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a id="registerLink" class="nav-link text-white" href="@Url.Action("Register", "Account")" title="Create a new account" data-bs-toggle="tooltip">
+                <i class="fa-solid fa-user-plus"></i> Register
+            </a>
+        </li>
+        <li class="nav-item">
+            <a id="loginLink" class="nav-link text-white" href="@Url.Action("Login", "Account")" title="Log into your account" data-bs-toggle="tooltip">
+                <i class="fa-solid fa-right-to-bracket"></i> Log in
+            </a>
+        </li>
+    </ul>
+}
+
+@section Scripts {
+    <script>
+        // Enable Bootstrap tooltips
+        document.addEventListener('DOMContentLoaded', function () {
+            const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+        });
+    </script>
+}

@@ -1,0 +1,68 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Account Locked";
+}
+
+<style>
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        background: linear-gradient(135deg, #f1f8e9, #e0f7fa);
+        padding: 20px;
+    }
+
+    .locked-card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+        animation: fadeIn 0.6s ease-in-out;
+    }
+
+    
+    h1 {
+        font-size: 2.2rem;
+        color: #d32f2f;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        color: #c62828;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #555;
+    }
+
+    .btn-home {
+        background-color: #00796b;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .btn-home:hover {
+        background-color: #004d40;
+    }
+</style>
+
+<main>
+    <div class="locked-card">
+        <h1>Locked Out</h1>
+        <h2>This account has been temporarily locked due to multiple failed login attempts.</h2>
+        <p>Please try again later or contact support if you believe this was a mistake.</p>
+        <a href="@Url.Action("Index", "Home")" class="btn-home" title="Return to homepage">Back to Home</a>
+    </div>
+</main>

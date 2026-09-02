@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Final.Models.Booking>
+
+@{
+    ViewBag.Title = "MyBookings";
+}
+
+<h2>My Bookings</h2>
+
+<!-- 🔍 Filter Bar -->
+@using (Html.BeginForm("MyBookings", "Booking", FormMethod.Get))
+{
+    <div class="form-inline mb-3">
+        <input type="text" name="searchDoctor" class="form-control mr-2" placeholder="Doctor Name"
+               value="@Request.QueryString["searchDoctor"]" />
+
+        <select name="statusFilter" class="form-control mr-2">
+            <option value="">-- Status --</option>
+            <option value="Confirmed" @(Request.QueryString["statusFilter"] == "Confirmed" ? "selected" : "")>Confirmed</option>
+            <option value="Pending" @(Request.QueryString["statusFilter"] == "Pending" ? "selected" : "")>Pending</option>
+            <option value="Cancelled" @(Request.QueryString["statusFilter"] == "Cancelled" ? "selected" : "")>Cancelled</option>
+        </select>
+
+        <input type="date" name="dateFilter" class="form-control mr-2"
+               value="@Request.QueryString["dateFilter"]" />
+
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </div>
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success" })
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.First().Doctor.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.First().BookingDate)</th>
+            <th>@Html.DisplayNameFor(model => model.First().TimeSlot)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Notes)</th>
+            <th>@Html.DisplayNameFor(model => model.First().CreatedOn)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Status)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Doctor.Name)</td>
+                <td>@item.BookingDate.ToString("dd MMM yyyy")</td>
+                <td>@Html.DisplayFor(modelItem => item.TimeSlot)</td>
+                <td>@Html.DisplayFor(modelItem => item.Notes)</td>
+                <td>@item.CreatedOn.ToString("dd MMM yyyy HH:mm")</td>
+                <td>
+                    <span class="@(item.Status == Final.Models.Booking.status.Confirmed ? "text-success" :
+                               item.Status == Final.Models.Booking.status.Pending ? "text-warning" :
+                               "text-danger")">
+                        @item.Status.ToString()
+                    </span>
+                </td>
+                <td>
+                    @if (item.Status != Final.Models.Booking.status.Confirmed)
+                    {
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) 
+@Html.ActionLink("Delete", "Delete", new { id = item.Id }) 
+                    }
+                    @Html.ActionLink("Details", "Details", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

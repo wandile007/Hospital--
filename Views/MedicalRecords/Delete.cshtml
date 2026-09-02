@@ -1,0 +1,82 @@
+﻿@model Final.Models.MedicalRecord
+@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = "Delete Medical Record";
+
+    var isAdmin = User.IsInRole("Admin");
+    var isDoctor = User.IsInRole("Doctor");
+    var isPatient = User.IsInRole("Patient");
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-danger">
+        <i class="bi bi-trash3-fill"></i> @(isPatient ? "View Medical Record" : "Delete Medical Record")
+    </h2>
+
+    <div class="alert @(isPatient ? "alert-warning" : "alert-danger") d-flex align-items-center" role="alert">
+        <i class="bi @(isPatient ? "bi-exclamation-triangle-fill" : "bi-exclamation-circle-fill") me-2"></i>
+        <div>
+            @(isPatient
+                ? "You do not have permission to delete this medical record."
+                : "Are you sure you want to delete this medical record?")
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Medical Record Details</h5>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.Doctor.Name)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Doctor.Name)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.Patient.FullName)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Patient.FullName)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.Diagnosis)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Diagnosis)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.TreatmentPlan)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.TreatmentPlan)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.PrescribedMedications)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.PrescribedMedications)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.LabTestsOrdered)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.LabTestsOrdered)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.VisitDate)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.VisitDate)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.CreatedDate)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.CreatedDate)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.Notes)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Notes)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.IsFollowUpRequired)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.IsFollowUpRequired)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.FollowUpDate)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.FollowUpDate)</dd>
+            </dl>
+        </div>
+    </div>
+
+    @if (isAdmin || isDoctor)
+    {
+        using (Html.BeginForm("DeleteConfirmed", "MedicalRecords", FormMethod.Post, new { @class = "d-inline" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.RecordId)
+
+            <button type="submit" class="btn btn-danger me-2">
+                <i class="bi bi-trash-fill"></i> Confirm Delete
+            </button>
+        }
+    }
+
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-secondary" })
+</div>

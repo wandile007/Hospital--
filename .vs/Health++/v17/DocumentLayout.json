@@ -1,0 +1,613 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|c:\\users\\user\\source\\repos\\health\u002B\u002Bfinal\\health\u002B\u002B\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\app_start\\startup.auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:app_start\\startup.auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\patientregistrationviewmodels\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\patientregistrationviewmodels\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\migrations\\202511051035507_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:migrations\\202511051035507_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\controllers\\patientregistrationviewmodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:controllers\\patientregistrationviewmodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\patientregistrationviewmodels\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\patientregistrationviewmodels\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\models\\patientregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:models\\patientregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\patients\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\patients\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\patients\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\patients\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\patients\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\patients\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\patientregistrationviewmodels\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\patientregistrationviewmodels\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\patientregistrationviewmodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\patientregistrationviewmodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\content\\bootstrap.rtl.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:content\\bootstrap.rtl.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\content\\bootstrap.rtl.min.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:content\\bootstrap.rtl.min.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Health\u002B\u002B||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\content\\bootstrap-grid.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:content\\bootstrap-grid.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\doctors\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\doctors\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\doctors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\doctors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\controllers\\medicalrecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:controllers\\medicalrecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\models\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:models\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\appointments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\appointments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\appointments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\appointments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\appointments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\appointments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838C3378-1616-4D03-9AC7-BC8DA2431AB0}|Health\u002B\u002B.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T06:12:55.69Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T07:48:35.011Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "Views\\Home\\About.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T07:43:38.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\PatientRegistrationViewModels\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\PatientRegistrationViewModels\\Create.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\PatientRegistrationViewModels\\Create.cshtml",
+              "RelativeToolTip": "Views\\PatientRegistrationViewModels\\Create.cshtml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAF0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-05T10:55:51.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "202511051035507_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Migrations\\202511051035507_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\202511051035507_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Migrations\\202511051035507_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\202511051035507_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T10:36:03.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Home\\Contact.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Contact.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Home\\Contact.cshtml",
+              "RelativeToolTip": "Views\\Home\\Contact.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAGsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T07:43:10.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Startup.Auth.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\App_Start\\Startup.Auth.cs",
+              "RelativeDocumentMoniker": "App_Start\\Startup.Auth.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\App_Start\\Startup.Auth.cs",
+              "RelativeToolTip": "App_Start\\Startup.Auth.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAjwDoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T14:39:25.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PatientRegistrationViewModelsController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Controllers\\PatientRegistrationViewModelsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PatientRegistrationViewModelsController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Controllers\\PatientRegistrationViewModelsController.cs",
+              "RelativeToolTip": "Controllers\\PatientRegistrationViewModelsController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAACkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T10:53:48.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\PatientRegistrationViewModels\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\PatientRegistrationViewModels\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\PatientRegistrationViewModels\\Delete.cshtml",
+              "RelativeToolTip": "Views\\PatientRegistrationViewModels\\Delete.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-05T11:10:48.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PatientRegistrationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\PatientRegistrationViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\PatientRegistrationViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\PatientRegistrationViewModel.cs",
+              "RelativeToolTip": "Models\\PatientRegistrationViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T11:12:22.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Patients\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Patients\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Patients\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Patients\\Edit.cshtml",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAIwJUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T07:44:49.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "Models\\Patient.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\Patient.cs",
+              "RelativeToolTip": "Models\\Patient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T10:59:35.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Patients\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Patients\\Details.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Patients\\Details.cshtml",
+              "RelativeToolTip": "Views\\Patients\\Details.cshtml",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAIwIUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T07:44:56.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Patients\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Patients\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Patients\\Index.cshtml",
+              "RelativeToolTip": "Views\\Patients\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T07:44:37.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\PatientRegistrationViewModels\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\PatientRegistrationViewModels\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\PatientRegistrationViewModels\\Edit.cshtml",
+              "RelativeToolTip": "Views\\PatientRegistrationViewModels\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-05T11:03:24.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\PatientRegistrationViewModels\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\PatientRegistrationViewModels\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\PatientRegistrationViewModels\\Index.cshtml",
+              "RelativeToolTip": "Views\\PatientRegistrationViewModels\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-05T11:03:18.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "bootstrap.rtl.min.css",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Content\\bootstrap.rtl.min.css",
+              "RelativeDocumentMoniker": "Content\\bootstrap.rtl.min.css",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Content\\bootstrap.rtl.min.css",
+              "RelativeToolTip": "Content\\bootstrap.rtl.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-04T11:38:44.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Site.css",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Content\\Site.css",
+              "RelativeDocumentMoniker": "Content\\Site.css",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Content\\Site.css",
+              "RelativeToolTip": "Content\\Site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-04T11:38:31.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "bootstrap.rtl.min.css.map",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Content\\bootstrap.rtl.min.css.map",
+              "RelativeDocumentMoniker": "Content\\bootstrap.rtl.min.css.map",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Content\\bootstrap.rtl.min.css.map",
+              "RelativeToolTip": "Content\\bootstrap.rtl.min.css.map",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-04T11:38:41.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Health\u002B\u002B",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Health\u002B\u002B.csproj",
+              "RelativeDocumentMoniker": "Health\u002B\u002B.csproj",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Health\u002B\u002B.csproj",
+              "RelativeToolTip": "Health\u002B\u002B.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-04T11:28:43.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-04T11:31:50.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "Models\\Appointment.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\Appointment.cs",
+              "RelativeToolTip": "Models\\Appointment.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T12:30:36.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "Models\\Doctor.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\Doctor.cs",
+              "RelativeToolTip": "Models\\Doctor.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAD8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:39:40.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "bootstrap-grid.css",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Content\\bootstrap-grid.css",
+              "RelativeDocumentMoniker": "Content\\bootstrap-grid.css",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Content\\bootstrap-grid.css",
+              "RelativeToolTip": "Content\\bootstrap-grid.css",
+              "ViewState": "AgIAANsOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-04T11:19:27.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Doctors\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Doctors\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Doctors\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Doctors\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T07:49:15.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Doctors\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Doctors\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Doctors\\Index.cshtml",
+              "RelativeToolTip": "Views\\Doctors\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-15T07:43:51.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MedicalRecordsController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Controllers\\MedicalRecordsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MedicalRecordsController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Controllers\\MedicalRecordsController.cs",
+              "RelativeToolTip": "Controllers\\MedicalRecordsController.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:42:26.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AppointmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Controllers\\AppointmentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AppointmentsController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Controllers\\AppointmentsController.cs",
+              "RelativeToolTip": "Controllers\\AppointmentsController.cs",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAAAAMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T10:46:39.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PatientsController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Controllers\\PatientsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PatientsController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Controllers\\PatientsController.cs",
+              "RelativeToolTip": "Controllers\\PatientsController.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T10:59:28.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DoctorsController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Controllers\\DoctorsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DoctorsController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Controllers\\DoctorsController.cs",
+              "RelativeToolTip": "Controllers\\DoctorsController.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAAAMgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:40:39.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:40:16.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IdentityModels.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\IdentityModels.cs",
+              "RelativeDocumentMoniker": "Models\\IdentityModels.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\IdentityModels.cs",
+              "RelativeToolTip": "Models\\IdentityModels.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAswDIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:40:03.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MedicalRecord.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\MedicalRecord.cs",
+              "RelativeDocumentMoniker": "Models\\MedicalRecord.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Models\\MedicalRecord.cs",
+              "RelativeToolTip": "Models\\MedicalRecord.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAswDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:39:53.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Appointments\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Appointments\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Appointments\\Index.cshtml",
+              "RelativeToolTip": "Views\\Appointments\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-06T07:45:30.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Appointments\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Appointments\\Details.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Appointments\\Details.cshtml",
+              "RelativeToolTip": "Views\\Appointments\\Details.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAABQPSsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-07T11:03:37.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Appointments\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Appointments\\Create.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Appointments\\Create.cshtml",
+              "RelativeToolTip": "Views\\Appointments\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-07T10:32:51.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Health\u002B\u002BFinal\\Health\u002B\u002B\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-07T10:39:43.998Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

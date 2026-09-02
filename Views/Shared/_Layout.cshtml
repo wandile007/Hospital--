@@ -1,0 +1,162 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>[Hospital]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: white;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 240px;
+            height: 100vh;
+            background: rgba(204, 228, 246, 0.85);
+            backdrop-filter: blur(10px);
+            box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+            .sidebar h2 {
+                text-align: center;
+                font-weight: 700;
+                color: #0077b6;
+                margin-bottom: 30px;
+            }
+
+            .sidebar a {
+                display: flex;
+                align-items: center;
+                padding: 12px 20px;
+                color: #004e7c;
+                text-decoration: none;
+                font-weight: 500;
+                transition: background 0.3s ease, transform 0.2s ease;
+            }
+
+                .sidebar a i {
+                    margin-right: 12px;
+                    font-size: 1.2rem;
+                    transition: transform 0.3s ease;
+                }
+
+                .sidebar a:hover {
+                    background-color: #e6f4ff;
+                    color: #0077b6;
+                }
+
+                    .sidebar a:hover i {
+                        transform: rotate(10deg) scale(1.2);
+                    }
+
+        .logout {
+            margin-top: auto;
+            border-top: 1px solid #ddd;
+        }
+
+        .main-content {
+            margin-left: 240px;
+            padding: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #666;
+            background-color: #f8f9fa;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>[Hospital]</h2>
+
+        @if (Request.IsAuthenticated)
+        {
+            var userName = User.Identity.IsAuthenticated;
+            var isAdmin = User.IsInRole("Admin");
+            var isDoctor = User.IsInRole("Doctor");
+            var isPatient = User.IsInRole("Patient");
+
+            <div class="dropdown">
+                <button class="dropdown-toggle fw-semibold" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false"
+                        style="background-color: black; color: white; border: 1px solid #444;">
+                    <i class="fa-solid fa-user-circle me-2"></i> Welcome, @userName
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end text-dark" aria-labelledby="userMenu">
+                    @if (isAdmin)
+                    {
+                        <li><a class="dropdown-item" href="/Doctors/Create"><i class="fa-solid fa-user-md"></i> Add Doctors</a></li>
+                        <li><a class="dropdown-item" href="/Doctors/Index"><i class="fa-solid fa-user-md"></i> Doctors</a></li>
+                        <li><a class="dropdown-item" href="/Appointments/Create"><i class="fa-solid fa-calendar-check"></i> Create Appointment</a></li>
+                        <li><a class="dropdown-item" href="/Appointments/Index"><i class="fa-solid fa-calendar-check"></i> Appointments</a></li>
+                    }
+                    else if (isDoctor)
+                    {
+                        <li><a class="dropdown-item" href="/Appointments/Create"><i class="fa-solid fa-calendar-check"></i> Create Appointment</a></li>
+                        <li><a class="dropdown-item" href="/Appointments/Index"><i class="fa-solid fa-calendar-check"></i> Appointments</a></li>
+                        <li><a class="dropdown-item" href="/DoctorSchedules/Index"><i class="fa-solid fa-file-medical"></i> Create Schedules</a></li>
+                    }
+                    else
+                    {
+                        <li><a class="dropdown-item" href="/Appointments/Create"><i class="fa-solid fa-calendar-check"></i> Create Appointment</a></li>
+                        <li><a class="dropdown-item" href="/Appointments/Index"><i class="fa-solid fa-calendar-plus"></i> My Appointments</a></li>
+                    }
+
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                        {
+                            @Html.AntiForgeryToken()
+                        <button type="submit" class="dropdown-item text-danger">
+                            <i class="fa-solid fa-right-from-bracket"></i> Log Out
+                        </button>
+                        }
+                    </li>
+                </ul>
+            </div>
+        }
+        else
+        {
+            <a href="/Home/Index"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="/Home/About"><i class="fa-solid fa-circle-info"></i> About</a>
+            <a href="/Home/Contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+            <br /><br />
+            <a href="/Account/Register"><i class="fa-solid fa-star"></i> Register Now</a>
+            <br /><br /><br />
+            <a href="/Account/Login"><i class="fa-solid fa-star"></i> Login</a>
+        }
+
+
+
+    </div>
+
+    <div class="main-content">
+        @RenderBody()
+
+        <footer>
+            &copy; @DateTime.Now.Year - [ Hospital]
+        </footer>
+    </div>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

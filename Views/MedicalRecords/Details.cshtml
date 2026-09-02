@@ -1,0 +1,58 @@
+﻿@model Final.Models.MedicalRecord
+
+@{
+    ViewBag.Title = "Medical Record Details";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-primary">
+        <i class="bi bi-file-earmark-text"></i> Medical Record Details
+    </h2>
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Record Summary</h5>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.Doctor.Name)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Doctor.Name)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.Patient.FullName)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Patient.FullName)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.Diagnosis)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Diagnosis)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.TreatmentPlan)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.TreatmentPlan)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.PrescribedMedications)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.PrescribedMedications)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.LabTestsOrdered)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.LabTestsOrdered)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.VisitDate)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.VisitDate)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.CreatedDate)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.CreatedDate)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.Notes)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Notes)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.IsFollowUpRequired)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.IsFollowUpRequired)</dd>
+
+                <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.FollowUpDate)</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.FollowUpDate)</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        @Html.ActionLink("✏️ Edit", "Edit", new { id = Model.RecordId }, new { @class = "btn btn-outline-primary me-2" })
+        @Html.ActionLink("← Back to List", "Index", null, new { @class = "btn btn-outline-secondary" })
+    </div>
+</div>

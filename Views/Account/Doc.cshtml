@@ -1,0 +1,169 @@
+﻿@model Final.Models.Doctor
+
+@{
+    ViewBag.Title = "Register Doctor";
+}
+
+<h2 style="color: #2c3e50; font-weight: bold; margin-bottom: 20px;">Register Doctor</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div style="background-color: #f9f9f9; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h4 style="color: #2980b9; font-weight: 600; margin-bottom: 25px;">Doctor Details</h4>
+        @Html.ValidationSummary(true, "", new { @style = "color: red; margin-bottom: 15px;" })
+
+        <!-- Name -->
+        <div style="margin-bottom: 15px;">
+            @Html.LabelFor(model => model.Name, new { @style = "font-weight: bold; color: #34495e;" })
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @style = "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;", placeholder = "First name" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @style = "color: red;" })
+        </div>
+
+        <!-- Surname -->
+        <div style="margin-bottom: 15px;">
+            @Html.LabelFor(model => model.Surname, new { @style = "font-weight: bold; color: #34495e;" })
+            @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @style = "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;", placeholder = "Surname" } })
+            @Html.ValidationMessageFor(model => model.Surname, "", new { @style = "color: red;" })
+        </div>
+
+        <!-- Specialty -->
+        <div style="margin-bottom: 15px;">
+            @Html.LabelFor(model => model.Specialty, new { @style = "font-weight: bold; color: #34495e;" })
+            @Html.DropDownListFor(model => model.Specialty,
+                     new SelectList(ViewBag.Specialties, "Value", "Text"),
+                     "-- Select Specialty --",
+                     new { @style = "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" })
+            @Html.ValidationMessageFor(model => model.Specialty, "", new { @style = "color: red;" })
+        </div>
+
+        <!-- Office Location -->
+        <div style="margin-bottom: 15px;">
+            @Html.LabelFor(model => model.OfficeLocation, new { @style = "font-weight: bold; color: #34495e;" })
+            @Html.EditorFor(model => model.OfficeLocation, new { htmlAttributes = new { @style = "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;", placeholder = "Office location" } })
+            @Html.ValidationMessageFor(model => model.OfficeLocation, "", new { @style = "color: red;" })
+        </div>
+
+        <!-- Phone Number -->
+        <div style="margin-bottom: 15px;">
+            @Html.LabelFor(model => model.PhoneNumber, new { @style = "font-weight: bold; color: #34495e;" })
+            @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @style = "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;", placeholder = "Phone number" } })
+            @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @style = "color: red;" })
+        </div>
+
+        <!-- Email -->
+        <div style="margin-bottom: 15px;">
+            @Html.LabelFor(model => model.Email, new { @style = "font-weight: bold; color: #34495e;" })
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @style = "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;", placeholder = "Email address", type = "email" } })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @style = "color: red;" })
+        </div>
+
+        <!-- Date Joined -->
+        <div style="margin-bottom: 15px;">
+            @Html.LabelFor(model => model.DateJoined, new { @style = "font-weight: bold; color: #34495e;" })
+            @Html.EditorFor(model => model.DateJoined, new { htmlAttributes = new { @style = "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;", type = "date" } })
+            @Html.ValidationMessageFor(model => model.DateJoined, "", new { @style = "color: red;" })
+        </div>
+
+        <!-- Availability -->
+        <div style="margin-bottom: 15px;">
+            @Html.LabelFor(model => model.IsAvailable, new { @style = "font-weight: bold; color: #34495e;" })
+            <div style="margin-top: 5px;">
+                @Html.CheckBoxFor(model => model.IsAvailable, new { @style = "margin-right: 10px;" })
+                <span style="color: #2ecc71;">Available for appointments</span>
+            </div>
+            @Html.ValidationMessageFor(model => model.IsAvailable, "", new { @style = "color: red;" })
+        </div>
+
+        <!-- IdentityUserId -->
+        @Html.HiddenFor(model => model.IdentityUserId)
+
+        <!-- Password -->
+        <div style="margin-bottom: 15px;">
+            @Html.LabelFor(model => model.Password, new { @style = "font-weight: bold; color: #34495e;" })
+            @Html.PasswordFor(model => model.Password, new { @style = "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;", placeholder = "Create password", id = "passwordInput" })
+            <small id="passwordStrength" style="color: #7f8c8d;"></small>
+            @Html.ValidationMessageFor(model => model.Password, "", new { @style = "color: red;" })
+        </div>
+
+        <!-- Confirm Password -->
+        <div style="margin-bottom: 15px;">
+            @Html.LabelFor(model => model.ConfirmPassword, new { @style = "font-weight: bold; color: #34495e;" })
+            @Html.PasswordFor(model => model.ConfirmPassword, new { @style = "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;", placeholder = "Confirm password", id = "confirmPasswordInput" })
+            <small id="passwordMatch" style="color: #7f8c8d;"></small>
+            @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @style = "color: red;" })
+        </div>
+
+        <!-- Submit -->
+        <div style="margin-top: 30px;">
+            <input type="submit" value="Create" style="background-color: #27ae60; color: white; padding: 10px 20px; border: none; border-radius: 5px;" />
+            @Html.ActionLink("Back to List", "Index", null, new { @style = "margin-left: 15px; padding: 10px 20px; background-color: #bdc3c7; color: #2c3e50; text-decoration: none; border-radius: 5px;" })
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        const passwordInput = document.getElementById("passwordInput");
+        const confirmInput = document.getElementById("confirmPasswordInput");
+        const strengthText = document.getElementById("passwordStrength");
+        const matchText = document.getElementById("passwordMatch");
+
+        passwordInput.addEventListener("input", updateStrength);
+        confirmInput.addEventListener("input", checkMatch);
+
+        function updateStrength() {
+            const password = passwordInput.value;
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            switch (strength) {
+                case 0:
+                case 1:
+                    strengthText.textContent = "Very Weak 🔴";
+                    strengthText.className = "form-text text-danger";
+                    break;
+                case 2:
+                    strengthText.textContent = "Weak 🟠";
+                    strengthText.className = "form-text text-warning";
+                    break;
+                case 3:
+                    strengthText.textContent = "Moderate 🟡";
+                    strengthText.className = "form-text text-secondary";
+                    break;
+                case 4:
+                    strengthText.textContent = "Strong 🟢";
+                    strengthText.className = "form-text text-success";
+                    break;
+                case 5:
+                    strengthText.textContent = "Very Strong ✅";
+                    strengthText.className = "form-text text-success fw-bold";
+                    break;
+            }
+
+            checkMatch(); // Re-check match on password change
+        }
+
+        function checkMatch() {
+            if (confirmInput.value === "") {
+                matchText.textContent = "";
+                return;
+            }
+
+            if (confirmInput.value === passwordInput.value) {
+                matchText.textContent = "Passwords match ✅";
+                matchText.className = "form-text text-success";
+            } else {
+                matchText.textContent = "Passwords do not match ❌";
+                matchText.className = "form-text text-danger";
+            }
+        }
+    </script>
+}

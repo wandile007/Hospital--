@@ -1,0 +1,54 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{ ViewBag.Title = "Oops! Something went wrong"; }
+
+<style>
+    body {
+        background: linear-gradient(135deg, #f8f9fa, #e0f7fa);
+        font-family: 'Segoe UI', sans-serif;
+        padding: 40px;
+        color: #333;
+    }
+
+    .error-container {
+        max-width: 700px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: #d32f2f;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        color: #c62828;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    a.btn-home {
+        background-color: #00796b;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        a.btn-home:hover {
+            background-color: #004d40;
+        }
+</style>
+
+<div class="error-container"> <h1>Error</h1> <h2>An unexpected issue occurred while processing your request.</h2> <p> We’re sorry for the inconvenience. This might be due to a temporary system glitch, a missing page, or an internal server error. If you were in the middle of something important, rest assured — our team has been notified and is working to resolve it. </p> <p> You can try refreshing the page, or return to the homepage and continue browsing. </p> <a href="@Url.Action("Index", "Home")" class="btn-home" title="Return to homepage">Back to Home</a> </div>

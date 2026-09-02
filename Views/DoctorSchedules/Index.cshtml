@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Final.Models.DoctorSchedule>
+@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = "Doctor Schedules";
+    var isAdmin = User.IsInRole("Admin");
+    var isDoctor = User.IsInRole("Doctor");
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-primary">
+        <i class="bi bi-calendar-week"></i> Doctor Schedules
+    </h2>
+
+    @if (isAdmin || isDoctor)
+    {
+        <div class="mb-3">
+            @Html.ActionLink("➕ Create New Schedule", "Create", null, new { @class = "btn btn-success" })
+        </div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.First().Doctor.Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().ScheduleDate)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().StartTime)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().EndTime)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().IsAvailable)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().IsRecurring)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().RecurrencePattern)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Notes)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().CreatedOn)</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Doctor.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ScheduleDate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.StartTime)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EndTime)</td>
+                        <td>@Html.DisplayFor(modelItem => item.IsAvailable)</td>
+                        <td>@Html.DisplayFor(modelItem => item.IsRecurring)</td>
+                        <td>@Html.DisplayFor(modelItem => item.RecurrencePattern)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Notes)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CreatedOn)</td>
+                        <td class="text-center">
+                            <div class="btn-group" role="group">
+                                @if (isAdmin || isDoctor)
+                                {
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.ScheduleId }, new { @class = "btn btn-outline-primary btn-sm" })
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.ScheduleId }, new { @class = "btn btn-outline-danger btn-sm ms-1" })
+                                }
+                                @Html.ActionLink("Details", "Details", new { id = item.ScheduleId }, new { @class = "btn btn-outline-secondary btn-sm ms-1" })
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

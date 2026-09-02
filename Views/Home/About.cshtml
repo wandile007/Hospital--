@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "About Us";
+    ViewBag.Message = "Empowering Health, Enriching Lives";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+<style>
+    .feature-icon {
+        transition: transform 0.3s ease;
+    }
+
+        .feature-icon:hover {
+            transform: scale(1.2);
+        }
+
+    .feature-card {
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease;
+    }
+
+        .feature-card:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+    }
+</style>
+
+<main aria-labelledby="title" class="container py-5">
+    <!-- Header -->
+    <h2 id="title" class="text-center text-primary mb-4" title="Learn more about our mission">
+        <i class="fas fa-heartbeat me-2"></i> @ViewBag.Title
+    </h2>
+    <h4 class="text-center text-muted mb-5" title="Our commitment to care">@ViewBag.Message</h4>
+
+    <!-- Features -->
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="feature-card h-100">
+                <i class="fas fa-user-md fa-3x text-info mb-3 feature-icon" title="Meet our expert medical team"></i>
+                <h5 class="text-info">Expert Care</h5>
+                <p>Our team of licensed professionals delivers compassionate, evidence-based care tailored to every patient’s needs.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="feature-card h-100">
+                <i class="fas fa-hospital fa-3x text-success mb-3 feature-icon" title="Explore our modern facilities"></i>
+                <h5 class="text-success">Modern Facilities</h5>
+                <p>We invest in cutting-edge technology and clean, safe environments to ensure the highest standards of treatment.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="feature-card h-100">
+                <i class="fas fa-hand-holding-heart fa-3x text-danger mb-3 feature-icon" title="We put patients first"></i>
+                <h5 class="text-danger">Patient-Centered</h5>
+                <p>We listen, we care, and we empower. Your health journey is our priority, every step of the way.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-5">
+        <a href="@Url.Action("Contact", "Home")" class="btn btn-outline-primary fw-bold" title="Reach out to our team">
+            <i class="fas fa-envelope-open-text me-2"></i> Get in Touch
+        </a>
+    </div>
+</main>

@@ -1,0 +1,90 @@
+﻿@model Final.Models.Appointment
+
+@{
+    ViewBag.Title = "Delete Appointment";
+}
+
+<!-- Bootstrap & Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-danger text-white d-flex justify-content-between align-items-center">
+            <h4><i class="fa-solid fa-trash-can me-2"></i> Delete Appointment</h4>
+            <a href="@Url.Action("Index")" class="btn btn-light btn-sm">
+                <i class="fa-solid fa-arrow-left"></i> Back to List
+            </a>
+        </div>
+
+        <div class="card-body">
+            <h5 class="text-danger mb-4"><i class="fa-solid fa-circle-exclamation me-2"></i> Are you sure you want to delete this appointment?</h5>
+
+            <dl class="row">
+                <dt class="col-sm-3 fw-bold">
+                    <i class="fa-solid fa-user-doctor me-1"></i> Doctor
+                </dt>
+                <dd class="col-sm-9">
+                   Dr. @Html.DisplayFor(model => model.Doctor.Surname)
+                </dd>
+
+                <dt class="col-sm-3 fw-bold">
+                    <i class="fa-solid fa-user-doctor me-1"></i> Specialty
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Doctor.Specialty)
+                </dd>
+
+                <dt class="col-sm-3 fw-bold">
+                    <i class="fa-solid fa-calendar-day me-1"></i> Appointment Date
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.AppointmentDate)
+                </dd>
+
+                <dt class="col-sm-3 fw-bold">
+                    <i class="fa-solid fa-clipboard-check me-1"></i> Status
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+
+                <dt class="col-sm-3 fw-bold">
+                    <i class="fa-solid fa-note-sticky me-1"></i> Notes
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Notes)
+                </dd>
+
+                <dt class="col-sm-3 fw-bold">
+                    <i class="fa-solid fa-clock me-1"></i> Created On
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.CreatedOn)
+                </dd>
+
+                <dt class="col-sm-3 fw-bold">
+                    <i class="fa-solid fa-calendar-check me-1"></i> Booking Date
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.BookingDate)
+                </dd>
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fa-solid fa-trash me-1"></i> Confirm Delete
+                    </button>
+                    <a href="@Url.Action("Index")" class="btn btn-secondary">
+                        <i class="fa-solid fa-ban me-1"></i> Cancel
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

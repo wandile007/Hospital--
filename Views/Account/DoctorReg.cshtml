@@ -1,0 +1,177 @@
+﻿@model Final.Models.Doctor
+
+@{
+    ViewBag.Title = "Doctor Registration";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<main class="container py-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h4><i class="fa-solid fa-user-doctor me-2"></i> Doctor Registration</h4>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <!-- Name -->
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.Name, new { @class = "form-label" })
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", placeholder = "First name" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Surname -->
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.Surname, new { @class = "form-label" })
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-user-tag"></i></span>
+                        @Html.TextBoxFor(model => model.Surname, new { @class = "form-control", placeholder = "Surname" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Specialty -->
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.Specialty, new { @class = "form-label" })
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-stethoscope"></i></span>
+                        @Html.TextBoxFor(model => model.Specialty, new { @class = "form-control", placeholder = "Specialty" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Specialty, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Office Location -->
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.OfficeLocation, new { @class = "form-label" })
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                        @Html.TextBoxFor(model => model.OfficeLocation, new { @class = "form-control", placeholder = "Office location" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.OfficeLocation, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Phone Number -->
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.PhoneNumber, new { @class = "form-label" })
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", placeholder = "Phone number" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.Email, new { @class = "form-label" })
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Email address", type = "email" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Date Joined -->
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.DateJoined, new { @class = "form-label" })
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-calendar-day"></i></span>
+                        @Html.TextBoxFor(model => model.DateJoined, new { @class = "form-control", type = "date" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.DateJoined, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Availability -->
+                <div class="form-check mb-3">
+                    @Html.CheckBoxFor(model => model.IsAvailable, new { @class = "form-check-input", id = "isAvailableCheck" })
+                    <label class="form-check-label" for="isAvailableCheck">
+                        <i class="fa-solid fa-user-check"></i> Available for appointments
+                    </label>
+                    @Html.ValidationMessageFor(model => model.IsAvailable, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Password -->
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.Password, new { @class = "form-label" })
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                        @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Create password", id = "passwordInput" })
+                    </div>
+                    <small id="passwordStrength" class="form-text text-muted"></small>
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.ConfirmPassword, new { @class = "form-label" })
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                        @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control", placeholder = "Confirm password", id = "confirmPasswordInput" })
+                    </div>
+                    <small id="passwordMatch" class="form-text text-muted"></small>
+                    @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Submit -->
+                <div class="text-end">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fa-solid fa-user-plus"></i> Add Doctor
+                    </button>
+                    <a href="@Url.Action("Index", "Doctor")" class="btn btn-outline-secondary ms-2">
+                        <i class="fa-solid fa-arrow-left"></i> Back to List
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        document.getElementById("passwordInput").addEventListener("input", function () {
+            const password = this.value;
+            const strengthText = document.getElementById("passwordStrength");
+
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            switch (strength) {
+                case 0:
+                case 1:
+                    strengthText.textContent = "Very Weak 🔴";
+                    strengthText.className = "form-text text-danger";
+                    break;
+                case 2:
+                    strengthText.textContent = "Weak 🟠";
+                    strengthText.className = "form-text text-warning";
+                    break;
+                case 3:
+                    strengthText.textContent = "Moderate 🟡";
+                    strengthText.className = "form-text text-secondary";
+                    break;
+                case 4:
+                    strengthText.textContent = "Strong 🟢";
+                    strengthText.className = "form-text text-success";
+                    break;
+                case 5:
+                    strengthText.textContent = "Very Strong ✅";
+                    strengthText.className = "form-text text-success fw-bold";
+                    break;
+            }
+        });
+    </script>
+}

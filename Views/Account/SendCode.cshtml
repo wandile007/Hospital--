@@ -1,0 +1,85 @@
+﻿@model Health__.Models.SendCodeViewModel
+@{
+    ViewBag.Title = "Send Verification Code";
+}
+
+<style>
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+        background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+        padding: 20px;
+    }
+
+    .sendcode-card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 500px;
+        animation: fadeIn 0.6s ease-in-out;
+    }
+
+   
+
+    h2, h4 {
+        text-align: center;
+        color: #00695c;
+    }
+
+    label {
+        font-weight: 500;
+    }
+
+    .btn-health {
+        background-color: #00796b;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+
+    .btn-health:hover {
+        background-color: #004d40;
+        color: white;
+    }
+</style>
+
+<main aria-labelledby="title">
+    <div class="sendcode-card">
+        <h2 id="title">@ViewBag.Title</h2>
+        <h4>Send verification code</h4>
+        <hr />
+
+        @using (Html.BeginForm("SendCode", "Account", new { ReturnUrl = Model.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.Hidden("rememberMe", @Model.RememberMe)
+
+            <div class="mb-3">
+                <label for="SelectedProvider" class="form-label">Select Two‑Factor Authentication Provider:</label>
+                @Html.DropDownListFor(model => model.SelectedProvider, Model.Providers, new { @class = "form-select", title = "Choose how you want to receive your verification code" })
+            </div>
+
+            <div class="d-grid">
+                <input type="submit" value="Submit" class="btn btn-health" title="Click to send verification code" />
+            </div>
+        }
+    </div>
+</main>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        // Enable Bootstrap tooltips
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'))
+            tooltipTriggerList.forEach(function (el) {
+                new bootstrap.Tooltip(el)
+            })
+        });
+    </script>
+}

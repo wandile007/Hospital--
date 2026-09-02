@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Final.Models.Booking>
+@{
+    ViewBag.Title = "Booking Index";
+}
+
+<h2 style="color: #2c3e50; font-weight: bold; margin-bottom: 20px;">Booking List</h2>
+
+<!-- Filter Section -->
+<form method="get" action="@Url.Action("Index")" style="margin-bottom: 20px; display: flex; gap: 20px; align-items: center;">
+    <div>
+        <label for="doctorId" style="font-weight: 500;">Doctor:</label>
+        <select name="doctorId" id="doctorId" style="padding: 5px 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <option value="">All</option>
+            @* Replace with actual doctor list *@
+            <option value="1">Dr. Smith</option>
+            <option value="2">Dr. Jones</option>
+        </select>
+    </div>
+    <div>
+        <label for="date" style="font-weight: 500;">Date:</label>
+        <input type="date" name="date" id="date" style="padding: 5px 10px; border-radius: 5px; border: 1px solid #ccc;" />
+    </div>
+    <button type="submit" style="background-color: #2980b9; color: white; padding: 8px 16px; border: none; border-radius: 5px;">Filter</button>
+</form>
+
+<!-- Export Buttons -->
+<div style="margin-bottom: 20px;">
+    <a href="@Url.Action("ExportToPdf")" style="background-color: #e74c3c; color: white; padding: 8px 16px; border-radius: 5px; text-decoration: none; margin-right: 10px;">📄 Export to PDF</a>
+    <a href="@Url.Action("ExportToExcel")" style="background-color: #27ae60; color: white; padding: 8px 16px; border-radius: 5px; text-decoration: none;">📊 Export to Excel</a>
+</div>
+
+<!-- Create Button -->
+<p>
+    @Html.ActionLink("➕ Create New Booking", "Create", null, new
+    {
+        @style = "background-color: #3498db; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 500;"
+    })
+</p>
+
+<!-- Booking Table -->
+<table style="width: 100%; border-collapse: collapse; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;">
+    <thead style="background-color: #34495e; color: white;">
+        <tr>
+            <th style="padding: 12px;">@Html.DisplayNameFor(model => model.First().PatientName)</th>
+            <th style="padding: 12px;">@Html.DisplayNameFor(model => model.First().ContactNumber)</th>
+            <th style="padding: 12px;">@Html.DisplayNameFor(model => model.First().Email)</th>
+            <th style="padding: 12px;">@Html.DisplayNameFor(model => model.First().BookingDate)</th>
+            <th style="padding: 12px;">@Html.DisplayNameFor(model => model.First().TimeSlot)</th>
+            <th style="padding: 12px;">@Html.DisplayNameFor(model => model.First().DoctorId)</th>
+            <th style="padding: 12px;">@Html.DisplayNameFor(model => model.First().Notes)</th>
+            <th style="padding: 12px;">@Html.DisplayNameFor(model => model.First().CreatedOn)</th>
+            <th style="padding: 12px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="border-bottom: 1px solid #ecf0f1;" onmouseover="this.style.backgroundColor='#f2f9ff'" onmouseout="this.style.backgroundColor='white'">
+                <td style="padding: 10px;">@item.PatientName</td>
+                <td style="padding: 10px;">@item.ContactNumber</td>
+                <td style="padding: 10px;">@item.Email</td>
+                <td style="padding: 10px;">@item.BookingDate.ToString("dd MMM yyyy")</td>
+                <td style="padding: 10px;">@item.TimeSlot</td>
+                <td style="padding: 10px;">@item.DoctorId</td>
+                <td style="padding: 10px;">@item.Notes</td>
+                <td style="padding: 10px;">@item.CreatedOn.ToString("dd MMM yyyy HH:mm")</td>
+                <td style="padding: 10px;">
+                    @Html.ActionLink("✏️ Edit", "Edit", new { id = item.Id }, new { @style = "margin-right: 5px; color: #f39c12;" })
+                    @Html.ActionLink("🔍 Details", "Details", new { id = item.Id }, new { @style = "margin-right: 5px; color: #2980b9;" })
+                    @Html.ActionLink("🗑️ Delete", "Delete", new { id = item.Id }, new { @style = "color: #c0392b;" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

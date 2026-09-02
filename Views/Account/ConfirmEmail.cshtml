@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Confirm Email";
+}
+
+<style>
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+        padding: 20px;
+    }
+
+    .confirm-card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+        animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+        color: #00695c;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .btn-health {
+        background-color: #00796b;
+        color: white !important;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-health:hover {
+        background-color: #004d40;
+    }
+</style>
+
+<main aria-labelledby="title">
+    <div class="confirm-card">
+        <h2 id="title">@ViewBag.Title</h2>
+        <p>Thank you for confirming your email.</p>
+        @Html.ActionLink("Click here to Log in", "Login", "Account", null, new { @class = "btn-health", title = "Go to login page" })
+    </div>
+</main>
